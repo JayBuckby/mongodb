@@ -46,6 +46,6 @@ echo -------------- Install Dependancies ------------
 npm install
 
 echo -------------------- Run App -------------------
-node script.js
+node index.js
 
 

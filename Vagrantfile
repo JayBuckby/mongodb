@@ -50,7 +50,7 @@ end
       node.vm.synced_folder "app/", "/home/vagrant/app/"
       node.vm.synced_folder "env/", "/home/vagrant/env"
   end
+  node.vm.provision "shell", inline: "echo 'export DB_PATH=192.168.56.20' >> /etc/profile.d/myvars.sh", run: "always"
   node.vm.provision "shell", path: "env/nodeapp/script.sh"
-  node.vm.provision "shell", inline: "echo `export DB_PATH=192.168.56.20` >> /etc/profile.d/myvars.sh", run: "always"
   end
 end

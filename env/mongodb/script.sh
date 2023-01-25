@@ -14,16 +14,18 @@ echo ----- MongoDB Check Version -----
 mongod --version
 
 echo ----- Updating Mongod Config -----
-
 cat /etc/mongod.conf
 sudo cp /home/vagrant/env/mongodb/mongod.conf /etc/mongod.conf
 cat /etc/mongod.conf
 
+echo ---------- Restart Mongo Service ----------
+sudo systemctl restart mongod.service
+
 echo ----- Startup MongoDB -----
 sudo systemctl start mongod
 
-echo ----- Verifying Version -----
-sudo systemctl status mongod
+# echo ----- Verifying Version -----
+# sudo systemctl status mongod
 
 
 

@@ -29,9 +29,7 @@ app.get("*", (req, res) =>
 );
 
 app.listen(port, () =>
-  console.log(
-    `Server is listening on port ${port}, Environment = ${process.env.NODE_ENV}`
-  )
+  console.log(`Server is listening on port ${port}, Database = ${database}`)
 );
 
 export default app;
